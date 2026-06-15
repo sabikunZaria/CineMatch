@@ -23,7 +23,7 @@ function Header() {
       <div className="header-logo">
         <span className="logo-icon">🎬</span>
         <span className="logo-text">
-          LuLu <span className="logo-accent">Moviez</span>
+          Cine<span className="logo-accent">Match</span>
         </span>
       </div>
 
