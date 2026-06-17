@@ -12,7 +12,7 @@ function Navbar() {
         <span>Home</span>
       </NavLink>
 
-      <NavLink to="/movies" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+      <NavLink to="/Recommendations" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="2"/>
           <line x1="7" y1="2" x2="7" y2="22"/>
@@ -23,7 +23,7 @@ function Navbar() {
           <line x1="17" y1="17" x2="22" y2="17"/>
           <line x1="17" y1="7" x2="22" y2="7"/>
         </svg>
-        <span>Movies</span>
+        <span>Recommendations</span>
       </NavLink>
 
       <NavLink to="/favourite" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>

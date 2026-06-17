@@ -42,7 +42,6 @@
   background-color: #f40612;
 }
 
-
 @media (max-width: 639px) {
   .home {
     padding: 1rem 0;
@@ -53,13 +52,127 @@
   }
 }
 
-/* Inside your Home.css or wherever the grid container lives */
+/* Movie grid — this is the critical rule that makes cards display correctly */
 .movie-grid {
   display: grid;
-  /* Adjust 160px or 180px to make the columns as small as you prefer */
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 16px;
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* ── Filter panel ── */
+.filter-toggle-btn {
+    padding: 0.75rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.filter-toggle-btn:hover {
+    background-color: #444;
+}
+
+.filter-toggle-btn.active {
+    background-color: #555;
+}
+
+.filter-toggle-btn.has-filters {
+    background-color: #e50914;
+}
+
+.filter-panel {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chip {
+    padding: 0.35rem 0.85rem;
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.chip:hover {
+    background-color: #444;
+    color: white;
+}
+
+.chip.active {
+    background-color: #e50914;
+    color: white;
+}
+
+.clear-filters-btn {
+    align-self: flex-start;
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: 1px solid #555;
+    color: #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.clear-filters-btn:hover {
+    border-color: #e50914;
+    color: #e50914;
+}
+
+.filter-results-count {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.details-loading {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+    padding: 4px 0;
+    animation: pulse 1.5s infinite;
+}
+
+.loading-text {
+    text-align: center;
+    color: #aaa;
+    padding: 2rem;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
 }
